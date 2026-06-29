@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Player profile page screenshot preview">
+  <defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#050913"/><stop offset="1" stop-color="#111006"/></linearGradient><linearGradient id="gold" x1="0" x2="1"><stop stop-color="#f6bd24"/><stop offset="1" stop-color="#fff1a8"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <text x="430" y="92" fill="#f6bd24" font-family="Arial Black" font-size="24" letter-spacing="5">PLAYER PROFILE</text>
+  <text x="250" y="185" fill="#fff" font-family="Arial Black" font-size="78">#10 ATHLETE NAME</text>
+  <rect x="70" y="260" width="470" height="300" rx="24" fill="#0a0f18" stroke="#f6bd24"/>
+  <circle cx="305" cy="385" r="86" fill="#dce6ff"/><text x="235" y="505" fill="#fff" font-family="Arial Black" font-size="26">PLAYER PHOTO</text>
+  <rect x="590" y="260" width="540" height="300" rx="24" fill="#0a0f18" stroke="#f6bd24"/>
+  <text x="635" y="315" fill="#f6bd24" font-family="Arial Black" font-size="20">GAMECHANGER SNAPSHOT</text>
+  <g fill="#111b30" stroke="#f6bd24"><rect x="635" y="360" width="105" height="80" rx="12"/><rect x="770" y="360" width="105" height="80" rx="12"/><rect x="905" y="360" width="105" height="80" rx="12"/></g>
+  <g fill="#fff" font-family="Arial Black" font-size="24"><text x="665" y="410">AVG</text><text x="800" y="410">OBP</text><text x="938" y="410">OPS</text></g>
+  <rect x="70" y="610" width="1060" height="175" rx="24" fill="#f8f1d2"/>
+  <text x="115" y="670" fill="#071021" font-family="Arial Black" font-size="38">CHARACTER PROFILE</text>
+  <text x="610" y="665" fill="#071021" font-family="Arial" font-size="24">Coach notes · strengths · leadership · development focus</text>
+  <text x="395" y="840" fill="url(#gold)" font-family="Arial Black" font-size="28">PLAYER PAGE + FILM ROOM</text>
+</svg>

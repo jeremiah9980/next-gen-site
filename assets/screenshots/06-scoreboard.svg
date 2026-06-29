@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Tournament scoreboard screenshot preview">
+  <defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#02050b"/><stop offset="1" stop-color="#10150c"/></linearGradient><linearGradient id="gold" x1="0" x2="1"><stop stop-color="#f6bd24"/><stop offset="1" stop-color="#ffe177"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <text x="365" y="108" fill="#f6bd24" font-family="Arial Black" font-size="26" letter-spacing="5">TOURNAMENT WEEKEND</text>
+  <text x="320" y="195" fill="#fff" font-family="Arial Black" font-size="76">SCOREBOARD</text>
+  <g fill="#071021" stroke="#f6bd24"><rect x="115" y="255" width="220" height="130" rx="18"/><rect x="365" y="255" width="220" height="130" rx="18"/><rect x="615" y="255" width="220" height="130" rx="18"/><rect x="865" y="255" width="220" height="130" rx="18"/></g>
+  <g fill="#fff" font-family="Arial Black" font-size="52"><text x="210" y="335">0</text><text x="460" y="335">0</text><text x="700" y="335">+4</text><text x="955" y="335">4</text></g>
+  <g fill="#aab4ca" font-family="Arial Black" font-size="16"><text x="185" y="362">WINS</text><text x="430" y="362">LOSSES</text><text x="660" y="362">RUN DIFF</text><text x="925" y="362">POOL GMS</text></g>
+  <rect x="115" y="455" width="970" height="250" rx="24" fill="#071021" stroke="#f6bd24"/>
+  <text x="165" y="520" fill="#f6bd24" font-family="Arial Black" font-size="24">NEXT UP · GAME 4</text>
+  <text x="165" y="585" fill="#fff" font-family="Arial Black" font-size="36">Team Name vs Opponent</text>
+  <text x="165" y="640" fill="#aab4ca" font-family="Arial" font-size="26">10:20 AM · Field 2 · Score button · Bracket tab</text>
+  <text x="405" y="820" fill="#f6bd24" font-family="Arial Black" font-size="28">TEAM SCOREBOARD</text>
+</svg>

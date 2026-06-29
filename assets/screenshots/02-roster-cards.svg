@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Roster card page screenshot preview">
+  <defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#02050b"/><stop offset="1" stop-color="#061b38"/></linearGradient><linearGradient id="card" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0a1930"/><stop offset="1" stop-color="#050913"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <text x="330" y="115" fill="#66b4ff" font-family="Arial Black" font-size="24" letter-spacing="5">OFFICIAL TEAM ROSTER</text>
+  <text x="298" y="205" fill="#fff" font-family="Arial Black" font-size="82">PLAYER CARDS</text>
+  <rect x="85" y="275" width="1030" height="62" rx="31" fill="#f7f9ff"/><text x="145" y="315" fill="#071021" font-family="Arial Black" font-size="22">13 PLAYERS</text><text x="365" y="315" fill="#071021" font-family="Arial Black" font-size="22">JERSEY NUMBERS</text><text x="690" y="315" fill="#071021" font-family="Arial Black" font-size="22">PROFILE LINKS</text>
+  <g fill="url(#card)" stroke="#1f5fff"><rect x="90" y="385" width="300" height="390" rx="20"/><rect x="450" y="385" width="300" height="390" rx="20"/><rect x="810" y="385" width="300" height="390" rx="20"/></g>
+  <g fill="#dce6ff"><circle cx="240" cy="500" r="54"/><circle cx="600" cy="500" r="54"/><circle cx="960" cy="500" r="54"/></g>
+  <g fill="#fff" font-family="Arial Black" font-size="28"><text x="135" y="620">Player Name</text><text x="495" y="620">Player Name</text><text x="855" y="620">Player Name</text></g>
+  <g fill="#66b4ff" font-family="Arial Black" font-size="22"><text x="150" y="690">#10 · Profile</text><text x="510" y="690">#16 · Profile</text><text x="870" y="690">#22 · Profile</text></g>
+  <text x="385" y="835" fill="#66b4ff" font-family="Arial Black" font-size="28">ROSTER CARD PAGE</text>
+</svg>

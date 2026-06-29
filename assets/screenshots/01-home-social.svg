@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Home page and social media hub screenshot preview">
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#06162f"/><stop offset="1" stop-color="#02050b"/></linearGradient><linearGradient id="blue" x1="0" x2="1"><stop stop-color="#1677ff"/><stop offset="1" stop-color="#66b4ff"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="44" y="36" width="1112" height="70" rx="16" fill="#050913" stroke="#1f5fff"/>
+  <circle cx="86" cy="71" r="25" fill="url(#blue)"/><text x="122" y="78" fill="#fff" font-family="Arial Black,Arial" font-size="24">TEAM FASTPITCH</text>
+  <text x="682" y="78" fill="#dce6ff" font-family="Arial" font-size="17">HOME · TEAM INFO · ROSTER · SCHEDULE · NCS</text>
+  <circle cx="600" cy="250" r="66" fill="#071021" stroke="#66b4ff" stroke-width="6"/><text x="555" y="270" fill="#fff" font-family="Arial Black" font-size="56">NG</text>
+  <text x="220" y="390" fill="#fff" font-family="Arial Black,Arial" font-size="78">TEAM SITE HOME</text>
+  <text x="330" y="445" fill="#66b4ff" font-family="Arial Black,Arial" font-size="34">FOLLOW THE TEAM · CATCH THE REELS</text>
+  <rect x="185" y="525" width="390" height="250" rx="26" fill="#f7f9ff"/><rect x="625" y="525" width="390" height="250" rx="26" fill="#f7f9ff"/>
+  <circle cx="240" cy="580" r="30" fill="#e84393"/><text x="285" y="590" fill="#08111f" font-family="Arial Black" font-size="22">Instagram Profile</text>
+  <circle cx="680" cy="580" r="30" fill="#1877f2"/><text x="725" y="590" fill="#08111f" font-family="Arial Black" font-size="22">Facebook Reels</text>
+  <rect x="230" y="635" width="300" height="90" fill="#dce6ff"/><rect x="670" y="635" width="300" height="90" fill="#dce6ff"/>
+  <text x="350" y="830" fill="#66b4ff" font-family="Arial Black" font-size="26">HOME + SOCIAL MEDIA HUB</text>
+</svg>

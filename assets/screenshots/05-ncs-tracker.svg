@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="NCS tournament tracker screenshot preview">
+  <defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#02050b"/><stop offset="1" stop-color="#062044"/></linearGradient><linearGradient id="blue" x1="0" x2="1"><stop stop-color="#1677ff"/><stop offset="1" stop-color="#66b4ff"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="110" y="80" width="980" height="120" rx="24" fill="#071021" stroke="#1f5fff"/>
+  <text x="160" y="130" fill="#66b4ff" font-family="Arial Black" font-size="22" letter-spacing="4">NCS FASTPITCH · TEAM TRACKER</text>
+  <text x="160" y="178" fill="#fff" font-family="Arial Black" font-size="38">Tournament Dashboard</text>
+  <g fill="#071021" stroke="#1f5fff"><rect x="110" y="245" width="310" height="130" rx="20"/><rect x="445" y="245" width="310" height="130" rx="20"/><rect x="780" y="245" width="310" height="130" rx="20"/></g>
+  <g fill="#fff" font-family="Arial Black" font-size="50"><text x="185" y="320">27-17</text><text x="535" y="320">.614</text><text x="875" y="320">L1</text></g>
+  <g fill="#aab4ca" font-family="Arial Black" font-size="17"><text x="195" y="350">RECORD</text><text x="525" y="350">WIN PCT</text><text x="850" y="350">STREAK</text></g>
+  <rect x="110" y="430" width="980" height="310" rx="24" fill="#071021" stroke="#1f5fff"/>
+  <text x="160" y="500" fill="#fff" font-family="Arial Black" font-size="32">Upcoming Tournament</text>
+  <text x="160" y="555" fill="#aab4ca" font-family="Arial" font-size="26">Pool play · opponent · field · standings · bracket status</text>
+  <rect x="160" y="615" width="210" height="70" rx="16" fill="url(#blue)"/><text x="205" y="660" fill="#fff" font-family="Arial Black" font-size="20">OPEN NCS</text>
+  <text x="390" y="820" fill="#66b4ff" font-family="Arial Black" font-size="28">NCS TOURNAMENT TRACKER</text>
+</svg>
