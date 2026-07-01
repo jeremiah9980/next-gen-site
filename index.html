@@ -1,71 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Next Gen Team Site | Pricing + Prospect Pitch</title>
-  <meta name="description" content="Pricing and landing page for Next Gen Team Site: modern team websites for youth sports teams with rosters, GameChanger-ready stats, NCS tournament trackers, social media, and fundraising." />
+  <title>NextGen Team Sites | Rally-powered youth sports websites</title>
+  <meta name="description" content="Modern youth sports team websites with roster pages, player profiles, GameChanger-ready stats, NCS tournament trackers, sponsors, fundraising, and Rally-OS / Rally-IQ development." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .site-mockup{overflow:hidden;border:1px solid rgba(102,180,255,.38);border-radius:28px;background:linear-gradient(145deg,rgba(22,119,255,.22),rgba(255,255,255,.06));box-shadow:0 24px 80px rgba(0,0,0,.45)}
-    .mock-top{display:flex;gap:.45rem;padding:.9rem 1rem;border-bottom:1px solid rgba(255,255,255,.15);background:rgba(0,0,0,.22)}
-    .mock-top span{width:11px;height:11px;border-radius:999px;background:rgba(255,255,255,.28)}
-    .mock-hero{min-height:360px;display:grid;place-content:center;text-align:center;padding:2rem;background:radial-gradient(circle at 50% 15%,rgba(102,180,255,.38),transparent 18rem),linear-gradient(135deg,#07162d,#02050b)}
-    .mock-hero p{color:#66b4ff;font-size:.78rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.mock-hero h2{font-size:clamp(2.2rem,4.6vw,4.4rem);max-width:620px;margin:.5rem auto 1.5rem}.mock-buttons{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap}.mock-buttons b{padding:.7rem .95rem;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.07);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}.mock-panels{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;padding:1rem;background:rgba(0,0,0,.26)}.mock-panels div{padding:1rem;border:1px solid rgba(255,255,255,.13);border-radius:16px;background:rgba(255,255,255,.06);text-align:center}.mock-panels strong{display:block;font-family:Anton,sans-serif;font-size:2rem;line-height:1}.mock-panels small{color:#aab4ca;text-transform:uppercase;font-weight:900;font-size:.68rem;letter-spacing:.08em}.mock-shot div{min-height:245px;display:grid;place-content:center;gap:.55rem;padding:1.5rem;text-align:center;background:radial-gradient(circle at 50% 10%,rgba(22,119,255,.45),transparent 12rem),linear-gradient(135deg,#07162d,#030711)}.mock-shot b{font-family:Anton,sans-serif;font-size:2.4rem;line-height:1;text-transform:uppercase}.mock-shot span{color:#aab4ca;font-weight:800}.mock-grid figure:nth-child(2n) div{background:radial-gradient(circle at 50% 10%,rgba(246,189,36,.34),transparent 12rem),linear-gradient(135deg,#181006,#030711)}@media(max-width:720px){.mock-panels{grid-template-columns:1fr}.mock-hero{min-height:300px}}
-  </style>
 </head>
 <body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
   <header class="site-header">
-    <a href="#top" class="brand"><span class="brand-mark">NG</span><span><strong>Next Gen</strong><small>Team Site</small></span></a>
-    <nav class="desktop-nav"><a href="#features">Features</a><a href="product.html">Product Visual</a><a href="#proof">Page Samples</a><a href="#pricing">Pricing</a><a href="#launch">Launch</a><a href="engage.html" class="nav-cta">Engage</a></nav>
+    <a href="#top" class="brand" aria-label="NextGen Team Sites home">
+      <span class="brand-mark">NG</span>
+      <span><strong>NextGen</strong><small>Team Sites</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="product.html">Product Visual</a>
+      <a href="#proof">Screens</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#rally">Rally</a>
+      <a href="engage.html" class="nav-cta">Engage</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" aria-pressed="false">
+      <span class="toggle-icon">☀️</span>
+      <span class="toggle-label">Light</span>
+    </button>
   </header>
 
   <main id="top">
     <section class="hero section-pad">
-      <div class="hero-copy">
-        <p class="eyebrow">One branded hub for serious youth sports teams</p>
-        <h1>Turn a team into a real sports platform.</h1>
-        <p class="hero-lede">Next Gen Team Site gives prospects a clean, sellable website package: social media, roster cards, player profiles, GameChanger-ready stats, NCS tournament tracking, sponsor visibility, and fundraising — all under one team link.</p>
-        <div class="hero-actions"><a href="engage.html" class="btn primary">Start an inquiry</a><a href="#pricing" class="btn ghost">View pricing</a><a href="product.html" class="btn ghost">View product visual</a></div>
-        <div class="hero-proof"><span>Home page</span><span>Roster cards</span><span>Player profiles</span><span>GameChanger</span><span>NCS tracker</span><span>Sponsors</span></div>
+      <div class="hero-copy reveal-card">
+        <p class="eyebrow">Built by a softball dad in Georgetown, TX</p>
+        <h1>One link. One team hub. A pro-level digital home.</h1>
+        <p class="hero-lede">NextGen Team Sites gives youth sports teams a modern, sponsor-ready website that connects rosters, player profiles, schedules, GameChanger-style stats, NCS tournament tracking, social media, fundraising, and team updates.</p>
+        <div class="hero-actions">
+          <a href="engage.html" class="btn primary">Start an inquiry</a>
+          <a href="#pricing" class="btn ghost">View pricing</a>
+          <a href="product.html" class="btn ghost">View product visual</a>
+        </div>
+        <div class="hero-proof">
+          <span>🥎 Rosters</span><span>⭐ Player profiles</span><span>🏆 NCS tracker</span><span>📊 Stats</span><span>💰 Sponsors</span><span>📲 Social hub</span>
+        </div>
       </div>
+
       <div class="hero-visual">
-        <div class="site-mockup main-mockup">
-          <div class="mock-top"><span></span><span></span><span></span></div>
-          <div class="mock-hero"><p>Texas Select Fastpitch · Team Hub</p><h2>Team Site Command Center</h2><div class="mock-buttons"><b>Roster</b><b>Schedule</b><b>NCS Dashboard</b></div></div>
-          <div class="mock-panels"><div><strong>13</strong><small>Players</small></div><div><strong>.614</strong><small>Win %</small></div><div><strong>GC</strong><small>Stats</small></div></div>
+        <div class="stadium-card main-mockup">
+          <div class="mock-shell">
+            <div class="mock-toolbar"><span></span><span></span><span></span><b>nextgen team hub</b></div>
+            <div class="mock-hero">
+              <div class="softball-orbit"><span>🥎</span></div>
+              <p>Texas Select Fastpitch</p>
+              <h2>Team Command Center</h2>
+              <div class="mock-buttons"><b>Roster</b><b>Schedule</b><b>NCS Dashboard</b></div>
+            </div>
+            <div class="mock-panels">
+              <div><strong>13</strong><small>Players</small></div>
+              <div><strong>.614</strong><small>Win %</small></div>
+              <div><strong>GC</strong><small>Stats</small></div>
+            </div>
+          </div>
         </div>
         <div class="floating-card stat-card"><strong>$997</strong><span>Pro package</span></div>
         <div class="floating-card roster-card-mini"><strong>NCS</strong><span>Tournament tracker</span></div>
+        <div class="floating-card iq-card"><strong>IQ</strong><span>Rally development</span></div>
       </div>
     </section>
 
     <section class="pain-solution section-pad compact">
       <div><p class="eyebrow">Why teams buy</p><h2>Parents need one link. Players need visibility. Coaches need less noise.</h2></div>
       <div class="solution-grid">
-        <article><h3>One place for families</h3><p>Stop scattering schedules, tournament info, roster details, fundraising links, and social posts across apps and group messages.</p></article>
-        <article><h3>A platform for players</h3><p>Give every athlete a profile with photos, stats, coach notes, character traits, and video clips that grow all season.</p></article>
-        <article><h3>Professional sponsor value</h3><p>Give sponsors a clean place to be seen and give teams a better story when asking for donations or support.</p></article>
+        <article><span>01</span><h3>One place for families</h3><p>Stop scattering schedules, tournament info, roster details, fundraising links, and social posts across apps and group messages.</p></article>
+        <article><span>02</span><h3>A platform for players</h3><p>Give every athlete a profile with photos, stats, coach notes, character traits, and video clips that grow all season.</p></article>
+        <article><span>03</span><h3>Sponsor-ready value</h3><p>Give sponsors a clean place to be seen and give teams a stronger story when asking for donations or support.</p></article>
       </div>
     </section>
 
     <section id="features" class="section-pad">
-      <div class="section-heading"><p class="eyebrow">Productized feature set</p><h2>Built from real team-site pages.</h2><p>The offer is modeled around the Bombers and Primetime concepts: home/social, roster cards, player pages, GameChanger sections, NCS dashboards, and tournament scoreboards.</p></div>
+      <div class="section-heading"><p class="eyebrow">Productized feature set</p><h2>Everything a serious team needs in one polished experience.</h2><p>NextGen Team Sites is built around the real team pages coaches and families care about: home/social, roster cards, player pages, GameChanger sections, NCS dashboards, and tournament scoreboards.</p></div>
       <div class="feature-grid">
-        <article class="feature-card"><span class="feature-icon">01</span><h3>Home + Social Hub</h3><p>Team brand, mission, announcements, Instagram/Facebook profile areas, reels, sponsor callouts, and fundraising buttons.</p></article>
-        <article class="feature-card"><span class="feature-icon">02</span><h3>Roster Card Page</h3><p>Player photos, jersey numbers, positions, guest-player tags, and profile links in a clean card layout.</p></article>
-        <article class="feature-card"><span class="feature-icon">03</span><h3>Player Profiles</h3><p>GameChanger stat snapshot, all-time stats, character profile, coach notes, development focus, and film room clips.</p></article>
-        <article class="feature-card"><span class="feature-icon">04</span><h3>GameChanger Ready</h3><p>Schedule and stats sections built for public GameChanger data or exported CSV imports when data is private.</p></article>
-        <article class="feature-card"><span class="feature-icon">05</span><h3>NCS Tournament Tracker</h3><p>Upcoming tournament dashboard, event links, pool games, opponents, fields, scores, standings, and bracket status.</p></article>
-        <article class="feature-card"><span class="feature-icon">06</span><h3>Fundraising + Sponsors</h3><p>Team fundraising pages, sponsor visibility, donor links, team store links, raffle pages, and campaign sections.</p></article>
+        <article class="feature-card"><span class="feature-icon">🏠</span><h3>Home + Social Hub</h3><p>Team brand, mission, announcements, Instagram/Facebook profile areas, reels, sponsor callouts, and fundraising buttons.</p></article>
+        <article class="feature-card"><span class="feature-icon">👥</span><h3>Roster Card Page</h3><p>Player photos, jersey numbers, positions, guest-player tags, and profile links in a clean card layout.</p></article>
+        <article class="feature-card"><span class="feature-icon">⭐</span><h3>Player Profiles</h3><p>GameChanger stat snapshot, all-time stats, character profile, coach notes, development focus, and film room clips.</p></article>
+        <article class="feature-card"><span class="feature-icon">📊</span><h3>GameChanger Ready</h3><p>Schedule and stats sections built for public GameChanger data or exported CSV imports when data is private.</p></article>
+        <article class="feature-card"><span class="feature-icon">🏆</span><h3>NCS Tournament Tracker</h3><p>Upcoming tournament dashboard, event links, pool games, opponents, fields, scores, standings, and bracket status.</p></article>
+        <article class="feature-card"><span class="feature-icon">💰</span><h3>Fundraising + Sponsors</h3><p>Team fundraising pages, sponsor visibility, donor links, team store links, raffle pages, and campaign sections.</p></article>
       </div>
     </section>
 
     <section id="proof" class="section-pad dark-panel">
-      <div class="section-heading left"><p class="eyebrow">Screenshots to show prospects</p><h2>Pitch the finished experience, not just a website.</h2><p>This gallery shows the exact page types prospects care about: home/social, roster cards, player profiles, GameChanger, NCS tracking, and tournament scoreboard views.</p></div>
+      <div class="section-heading left"><p class="eyebrow">Product visuals</p><h2>Pitch the finished experience, not just a website.</h2><p>This gallery shows the exact page types prospects care about: home/social, roster cards, player profiles, GameChanger, NCS tracking, and tournament scoreboard views.</p></div>
       <div class="screenshot-grid">
         <figure><img src="assets/screenshots/01-home-social.svg" alt="Home page and social media hub screenshot preview" /><figcaption>Home + social hub</figcaption></figure>
         <figure><img src="assets/screenshots/02-roster-cards.svg" alt="Roster card page screenshot preview" /><figcaption>Roster visibility</figcaption></figure>
@@ -76,8 +105,16 @@
       </div>
     </section>
 
+    <section id="rally" class="section-pad rally-section">
+      <div class="section-heading"><p class="eyebrow">Built to grow into Rally</p><h2>Team website now. Smarter team operations next.</h2><p>NextGen Team Sites is the public-facing layer. Rally-OS and Rally-IQ are the developing operations and intelligence layers for coaches, organizations, player development, and tournament workflow.</p></div>
+      <div class="rally-grid">
+        <article><b>Rally-OS</b><h3>Operations layer</h3><p>Roster data, schedule data, tournament context, sponsor systems, team information, and public-site publishing support.</p></article>
+        <article><b>Rally-IQ</b><h3>Intelligence layer</h3><p>Practice planning, player notes, development goals, stats trends, clips, coach workflow, and player progress tracking.</p></article>
+      </div>
+    </section>
+
     <section id="pricing" class="section-pad">
-      <div class="section-heading"><p class="eyebrow">Pricing scheme</p><h2>Keep it simple: build fee + monthly care plan.</h2><p>Use Pro as the main offer. Starter is the entry point. Elite is the tournament-team upsell. Organization is the big close.</p></div>
+      <div class="section-heading"><p class="eyebrow">Pricing scheme</p><h2>Simple packages coaches can understand fast.</h2><p>Starter is the entry point. Pro is the main offer. Elite is the tournament-team upsell. Organization is the bigger club system.</p></div>
       <div class="pricing-grid">
         <article class="price-card"><p class="tier">Starter</p><h3>Team Launch</h3><p class="price"><span>$497</span> build</p><p class="monthly">+ $49/mo care plan</p><ul><li>Branded homepage</li><li>Team info section</li><li>Social links / embed area</li><li>Basic schedule block</li><li>Fundraising / sponsor section</li></ul><a href="engage.html" class="btn ghost full">Start inquiry</a></article>
         <article class="price-card featured"><div class="badge">Best seller</div><p class="tier">Pro</p><h3>Player Visibility Hub</h3><p class="price"><span>$997</span> build</p><p class="monthly">+ $99/mo care plan</p><ul><li>Everything in Starter</li><li>Roster card page</li><li>Up to 12 player profiles</li><li>GameChanger schedule/stat layout</li><li>Coach notes + character profile</li><li>Film room / video clip wall</li></ul><a href="engage.html" class="btn primary full">Start inquiry</a></article>
@@ -90,8 +127,28 @@
 
     <section id="launch" class="section-pad launch-plan"><div class="section-heading"><p class="eyebrow">Launch plan</p><h2>Simple enough for coaches to say yes.</h2></div><div class="timeline"><article><span>1</span><h3>Collect Assets</h3><p>Logo, colors, roster, photos, GameChanger link, NCS link, social profiles, sponsor logos, and fundraising links.</p></article><article><span>2</span><h3>Build Pages</h3><p>Home, roster, player profiles, schedule, stats, social, NCS tracker, scoreboard, and sponsor sections.</p></article><article><span>3</span><h3>Launch Link</h3><p>Give families one professional link for team info, player visibility, tournament weekends, and sponsors.</p></article><article><span>4</span><h3>Update Seasonally</h3><p>Refresh stats, profiles, tournament info, sponsor content, and fundraising campaigns throughout the season.</p></article></div></section>
 
-    <section id="close" class="section-pad final-cta"><p class="eyebrow">Suggested close</p><h2>For less than one tournament weekend, your team gets one professional home.</h2><p>A Next Gen Team Site makes the team look organized, sponsor-ready, player-focused, and easier for families to follow.</p><div class="pitch-box"><h3>Prospect script</h3><p>“Instead of sending parents to GameChanger, Facebook, Instagram, NCS, group messages, and random screenshots, we can give your team one clean link with the roster, player profiles, schedule, stats, tournament tracker, scoreboard, social media, sponsors, and fundraising in one place.”</p></div><div class="hero-actions center"><a href="engage.html" class="btn primary">Start inquiry</a><a href="product.html" class="btn ghost">View product visual</a><a href="https://github.com/jeremiah9980/next-gen-site" class="btn ghost" target="_blank" rel="noopener">View repo</a></div></section>
+    <section id="close" class="section-pad final-cta"><p class="eyebrow">Suggested close</p><h2>For less than one tournament weekend, your team gets one professional home.</h2><p>A NextGen Team Site makes the team look organized, sponsor-ready, player-focused, and easier for families to follow.</p><div class="pitch-box"><h3>Prospect script</h3><p>“Instead of sending parents to GameChanger, Facebook, Instagram, NCS, group messages, and random screenshots, we can give your team one clean link with the roster, player profiles, schedule, stats, tournament tracker, scoreboard, social media, sponsors, and fundraising in one place.”</p></div><div class="hero-actions center"><a href="engage.html" class="btn primary">Start inquiry</a><a href="product.html" class="btn ghost">View product visual</a><a href="https://github.com/jeremiah9980/next-gen-site" class="btn ghost" target="_blank" rel="noopener">View repo</a></div></section>
   </main>
-  <footer class="site-footer"><p>Next Gen Team Site · Team websites for select sports programs.</p></footer>
+
+  <footer class="site-footer"><p>NextGen Team Sites · Rally-powered websites for youth sports programs.</p></footer>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.querySelector('.theme-toggle');
+    const icon = document.querySelector('.toggle-icon');
+    const label = document.querySelector('.toggle-label');
+    const savedTheme = localStorage.getItem('nextgen-theme');
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    const setTheme = (theme) => {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem('nextgen-theme', theme);
+      const isLight = theme === 'light';
+      toggle.setAttribute('aria-pressed', String(isLight));
+      icon.textContent = isLight ? '🌙' : '☀️';
+      label.textContent = isLight ? 'Dark' : 'Light';
+    };
+    setTheme(savedTheme || (prefersLight ? 'light' : 'dark'));
+    toggle.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+  </script>
 </body>
 </html>
