@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,9 +27,9 @@
       <a href="#rally">Rally</a>
       <a href="engage.html" class="nav-cta">Engage</a>
     </nav>
-    <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" aria-pressed="false">
-      <span class="toggle-icon">☀️</span>
-      <span class="toggle-label">Light</span>
+    <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" aria-pressed="true">
+      <span class="toggle-icon">🌙</span>
+      <span class="toggle-label">Dark</span>
     </button>
   </header>
 
@@ -137,17 +137,17 @@
     const toggle = document.querySelector('.theme-toggle');
     const icon = document.querySelector('.toggle-icon');
     const label = document.querySelector('.toggle-label');
-    const savedTheme = localStorage.getItem('nextgen-theme');
-    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    const storageKey = 'nextgen-theme-v2';
+    const savedTheme = localStorage.getItem(storageKey);
     const setTheme = (theme) => {
       root.setAttribute('data-theme', theme);
-      localStorage.setItem('nextgen-theme', theme);
+      localStorage.setItem(storageKey, theme);
       const isLight = theme === 'light';
       toggle.setAttribute('aria-pressed', String(isLight));
       icon.textContent = isLight ? '🌙' : '☀️';
       label.textContent = isLight ? 'Dark' : 'Light';
     };
-    setTheme(savedTheme || (prefersLight ? 'light' : 'dark'));
+    setTheme(savedTheme || 'light');
     toggle.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
   </script>
 </body>
