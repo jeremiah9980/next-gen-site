@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,14 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <style>
-    body{background:radial-gradient(circle at 12% 0%,rgba(22,119,255,.34),transparent 34rem),radial-gradient(circle at 84% 6%,rgba(246,189,36,.16),transparent 32rem),linear-gradient(180deg,#02050b,#071021 58%,#02050b)}
-    .engage-hero{padding:5.5rem clamp(1rem,4vw,4rem) 2.4rem;text-align:center}.engage-hero h1{max-width:980px;margin:0 auto 1rem}.engage-hero p{max-width:760px;margin:0 auto;color:var(--muted);font-size:1.12rem}.form-shell{max-width:1180px;margin:0 auto;padding:1.5rem clamp(1rem,4vw,4rem) 4.5rem}.form-layout{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:1rem}.engage-panel,.form-card{border:1px solid rgba(102,180,255,.28);border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));box-shadow:0 24px 70px rgba(0,0,0,.34)}.engage-panel{padding:1.4rem;align-self:start}.engage-panel h2{font-size:clamp(2rem,4vw,3.4rem);margin-bottom:.75rem}.engage-panel p{color:var(--muted)}.quick-list{display:grid;gap:.75rem;margin:1.1rem 0 0}.quick-list div{padding:.9rem;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:rgba(0,0,0,.22)}.quick-list strong{display:block;color:#66b4ff;text-transform:uppercase;letter-spacing:.07em;font-size:.78rem}.quick-list span{display:block;color:#dce6ff;margin-top:.25rem}.form-card{padding:1.35rem}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.field{display:grid;gap:.42rem}.field.full{grid-column:1/-1}.field label{font-weight:900;color:#f6f8ff;text-transform:uppercase;letter-spacing:.08em;font-size:.76rem}.field input,.field select,.field textarea{width:100%;min-height:48px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(0,0,0,.28);color:#fff;padding:.85rem .95rem;font:inherit}.field textarea{min-height:132px;resize:vertical}.field input::placeholder,.field textarea::placeholder{color:rgba(220,230,255,.5)}.check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;margin-top:.25rem}.check-grid label,.consent{display:flex;align-items:flex-start;gap:.55rem;padding:.75rem;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.045);color:#dce6ff;font-weight:700}.check-grid input,.consent input{margin-top:.25rem}.form-actions{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;margin-top:1.2rem}.form-note{margin-top:.9rem;color:var(--muted);font-size:.9rem}.activation-note{margin-bottom:1rem;padding:1rem;border-radius:18px;border:1px solid rgba(36,209,126,.38);background:rgba(36,209,126,.09);color:#fff}.activation-note strong{color:#24d17e}.status-box{display:none;margin-top:1rem;padding:1rem;border-radius:18px;border:1px solid rgba(36,209,126,.38);background:rgba(36,209,126,.09);color:#dfffea}.status-box.error{border-color:rgba(255,91,105,.45);background:rgba(255,91,105,.09);color:#ffe5e7}.hidden-honey{position:absolute;left:-9999px}@media(max-width:900px){.form-layout,.form-grid,.check-grid{grid-template-columns:1fr}.form-actions .btn{width:100%}}
+    .engage-hero{padding:5.5rem clamp(1rem,4vw,4rem) 2.4rem;text-align:center}.engage-hero h1{max-width:980px;margin:0 auto 1rem}.engage-hero p{max-width:760px;margin:0 auto;color:var(--muted);font-size:1.12rem}.form-shell{max-width:1180px;margin:0 auto;padding:1.5rem clamp(1rem,4vw,4rem) 4.5rem}.form-layout{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:1rem}.engage-panel,.form-card{border:1px solid color-mix(in srgb,var(--blue) 28%,transparent);border-radius:28px;background:var(--surface);box-shadow:var(--shadow)}.engage-panel{padding:1.4rem;align-self:start}.engage-panel h2{font-size:clamp(2rem,4vw,3.4rem);margin-bottom:.75rem}.engage-panel p{color:var(--muted)}.quick-list{display:grid;gap:.75rem;margin:1.1rem 0 0}.quick-list div{padding:.9rem;border:1px solid var(--line);border-radius:18px;background:var(--surface-2)}.quick-list strong{display:block;color:var(--blue-2);text-transform:uppercase;letter-spacing:.07em;font-size:.78rem}.quick-list span{display:block;color:var(--text);margin-top:.25rem}.form-card{padding:1.35rem}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.field{display:grid;gap:.42rem}.field.full{grid-column:1/-1}.field label{font-weight:900;color:var(--text);text-transform:uppercase;letter-spacing:.08em;font-size:.76rem}.field input,.field select,.field textarea{width:100%;min-height:48px;border:1px solid var(--line);border-radius:14px;background:var(--surface-2);color:var(--text);padding:.85rem .95rem;font:inherit}.field textarea{min-height:132px;resize:vertical}.field input::placeholder,.field textarea::placeholder{color:var(--muted)}.check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;margin-top:.25rem}.check-grid label,.consent{display:flex;align-items:flex-start;gap:.55rem;padding:.75rem;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--text);font-weight:700}.check-grid input,.consent input{margin-top:.25rem}.form-actions{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;margin-top:1.2rem}.form-note{margin-top:.9rem;color:var(--muted);font-size:.9rem}.activation-note{margin-bottom:1rem;padding:1rem;border-radius:18px;border:1px solid color-mix(in srgb,var(--green) 38%,transparent);background:color-mix(in srgb,var(--green) 9%,transparent);color:var(--text)}.activation-note strong{color:var(--green)}.status-box{display:none;margin-top:1rem;padding:1rem;border-radius:18px;border:1px solid color-mix(in srgb,var(--green) 38%,transparent);background:color-mix(in srgb,var(--green) 9%,transparent);color:var(--text)}.status-box.error{border-color:color-mix(in srgb,var(--red) 45%,transparent);background:color-mix(in srgb,var(--red) 9%,transparent);color:var(--text)}.hidden-honey{position:absolute;left:-9999px}@media(max-width:900px){.form-layout,.form-grid,.check-grid{grid-template-columns:1fr}.form-actions .btn{width:100%}}
   </style>
 </head>
 <body>
   <header class="site-header">
     <a href="index.html" class="brand"><span class="brand-mark">NG</span><span><strong>Next Gen</strong><small>Team Site</small></span></a>
     <nav class="desktop-nav"><a href="index.html#pricing">Pricing</a><a href="product.html">Product Visual</a><a href="engage.html" class="nav-cta">Engage</a></nav>
+    <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" aria-pressed="true">
+      <span class="toggle-icon">🌙</span>
+      <span class="toggle-label">Dark</span>
+    </button>
   </header>
 
   <main>
@@ -114,6 +117,25 @@
         statusBox.textContent = 'Submission did not complete: ' + error.message + ' You can use the Email instead button as a fallback.';
       }
     });
+  </script>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.querySelector('.theme-toggle');
+    const icon = document.querySelector('.toggle-icon');
+    const label = document.querySelector('.toggle-label');
+    const storageKey = 'nextgen-theme-v2';
+    const savedTheme = localStorage.getItem(storageKey);
+    const setTheme = (theme) => {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem(storageKey, theme);
+      const isLight = theme === 'light';
+      toggle.setAttribute('aria-pressed', String(isLight));
+      icon.textContent = isLight ? '🌙' : '☀️';
+      label.textContent = isLight ? 'Dark' : 'Light';
+    };
+    setTheme(savedTheme || 'light');
+    toggle.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
   </script>
 </body>
 </html>
