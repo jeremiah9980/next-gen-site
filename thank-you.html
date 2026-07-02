@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <style>
-    body{min-height:100vh;background:radial-gradient(circle at 50% 0%,rgba(22,119,255,.36),transparent 32rem),linear-gradient(180deg,#02050b,#071021 65%,#02050b)}.thanks{min-height:72vh;display:grid;place-items:center;padding:5rem clamp(1rem,4vw,4rem);text-align:center}.thanks-card{max-width:860px;border:1px solid rgba(102,180,255,.34);border-radius:32px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.035));padding:clamp(1.5rem,4vw,3rem);box-shadow:0 24px 70px rgba(0,0,0,.34)}.thanks-card h1{margin-bottom:1rem}.thanks-card p{color:var(--muted);font-size:1.1rem}.thanks-actions{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}@media(max-width:700px){.thanks-actions .btn{width:100%}}
+    .thanks{min-height:72vh;display:grid;place-items:center;padding:5rem clamp(1rem,4vw,4rem);text-align:center}.thanks-card{max-width:860px;border:1px solid color-mix(in srgb,var(--blue) 34%,transparent);border-radius:32px;background:var(--surface);padding:clamp(1.5rem,4vw,3rem);box-shadow:var(--shadow)}.thanks-card h1{margin-bottom:1rem}.thanks-card p{color:var(--muted);font-size:1.1rem}.thanks-actions{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}@media(max-width:700px){.thanks-actions .btn{width:100%}}
   </style>
 </head>
 <body>
   <header class="site-header">
     <a href="index.html" class="brand"><span class="brand-mark">NG</span><span><strong>Next Gen</strong><small>Team Site</small></span></a>
     <nav class="desktop-nav"><a href="index.html#pricing">Pricing</a><a href="product.html">Product Visual</a><a href="engage.html" class="nav-cta">Engage</a></nav>
+    <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" aria-pressed="true">
+      <span class="toggle-icon">🌙</span>
+      <span class="toggle-label">Dark</span>
+    </button>
   </header>
   <main class="thanks">
     <section class="thanks-card">
@@ -27,5 +31,24 @@
     </section>
   </main>
   <footer class="site-footer"><p>Next Gen Team Site · Inquiry submitted.</p></footer>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.querySelector('.theme-toggle');
+    const icon = document.querySelector('.toggle-icon');
+    const label = document.querySelector('.toggle-label');
+    const storageKey = 'nextgen-theme-v2';
+    const savedTheme = localStorage.getItem(storageKey);
+    const setTheme = (theme) => {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem(storageKey, theme);
+      const isLight = theme === 'light';
+      toggle.setAttribute('aria-pressed', String(isLight));
+      icon.textContent = isLight ? '🌙' : '☀️';
+      label.textContent = isLight ? 'Dark' : 'Light';
+    };
+    setTheme(savedTheme || 'light');
+    toggle.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+  </script>
 </body>
 </html>

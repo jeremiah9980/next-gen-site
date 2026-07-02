@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,9 +12,9 @@
   <style>
     body {
       background:
-        radial-gradient(circle at 10% 0%, rgba(255, 91, 105, 0.24), transparent 30rem),
-        radial-gradient(circle at 85% 8%, rgba(246, 189, 36, 0.16), transparent 28rem),
-        linear-gradient(180deg, #04070d 0%, #071021 55%, #04070d 100%);
+        radial-gradient(circle at 10% 0%, color-mix(in srgb, var(--red) 20%, transparent), transparent 30rem),
+        radial-gradient(circle at 85% 8%, color-mix(in srgb, var(--gold) 16%, transparent), transparent 28rem),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 55%, var(--bg) 100%);
     }
     .letter-hero { min-height: auto; display: block; padding-top: clamp(4rem, 8vw, 7rem); padding-bottom: 2rem; }
     .letter-hero h1 { max-width: 1040px; font-size: clamp(3rem, 8vw, 6.4rem); }
@@ -22,7 +22,7 @@
     .notice-card, .letter-card, .timeline-card, .contact-card {
       border: 1px solid var(--line);
       border-radius: 28px;
-      background: rgba(255, 255, 255, 0.07);
+      background: var(--surface);
       box-shadow: var(--shadow);
       backdrop-filter: blur(16px);
     }
@@ -31,8 +31,8 @@
       gap: 1rem;
       margin-bottom: 1.25rem;
       padding: 1.3rem;
-      border-color: rgba(246, 189, 36, 0.42);
-      background: linear-gradient(135deg, rgba(246, 189, 36, 0.13), rgba(255, 255, 255, 0.05));
+      border-color: color-mix(in srgb, var(--gold) 42%, transparent);
+      background: color-mix(in srgb, var(--gold) 9%, var(--surface));
     }
     .notice-card strong, .contact-card strong { color: var(--gold); }
     .letter-card { overflow: hidden; margin-top: 1.4rem; }
@@ -41,29 +41,29 @@
       gap: 0.6rem;
       padding: clamp(1.2rem, 3vw, 2rem);
       border-bottom: 1px solid var(--line);
-      background: rgba(0, 0, 0, 0.22);
+      background: var(--glass);
     }
     .letter-header h2 { margin: 0; font-size: clamp(2rem, 4.8vw, 4.2rem); }
     .letter-body { padding: clamp(1.2rem, 3vw, 2.2rem); }
-    .letter-body p, .letter-body li, .notice-card p, .timeline-card p, .contact-card p { color: var(--soft); font-size: 1rem; }
+    .letter-body p, .letter-body li, .notice-card p, .timeline-card p, .contact-card p { color: var(--text); font-size: 1rem; }
     .letter-body p { margin-bottom: 1rem; }
     .letter-body h3 { margin-top: 2rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; }
     .meta-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; margin: 1.25rem 0 0; }
     .meta-grid div, .timeline-card, .contact-card { padding: 1rem; }
-    .meta-grid div { border: 1px solid var(--line); border-radius: 18px; background: rgba(255, 255, 255, 0.05); }
+    .meta-grid div { border: 1px solid var(--line); border-radius: 18px; background: var(--surface-2); }
     .meta-grid span { display: block; color: var(--muted); font-size: 0.72rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; }
     .meta-grid b { display: block; margin-top: 0.25rem; color: var(--text); }
     .support-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
     .timeline-card h3, .contact-card h3 { color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; }
-    .timeline-card ol, .contact-card ul { display: grid; gap: 0.75rem; margin: 0; padding-left: 1.2rem; color: var(--soft); }
+    .timeline-card ol, .contact-card ul { display: grid; gap: 0.75rem; margin: 0; padding-left: 1.2rem; color: var(--text); }
     .contact-line {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       padding: 0.65rem 0.8rem;
-      border: 1px solid rgba(102, 180, 255, 0.35);
+      border: 1px solid color-mix(in srgb, var(--blue) 35%, transparent);
       border-radius: 999px;
-      background: rgba(22, 119, 255, 0.14);
+      background: color-mix(in srgb, var(--blue) 14%, transparent);
       color: var(--text);
       font-weight: 900;
     }
@@ -94,6 +94,10 @@
       <a href="product.html">Product Visual</a>
       <a href="engage.html" class="nav-cta">Engage</a>
     </nav>
+    <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" aria-pressed="true">
+      <span class="toggle-icon">🌙</span>
+      <span class="toggle-label">Dark</span>
+    </button>
   </header>
 
   <main>
@@ -228,5 +232,24 @@
   <footer class="site-footer">
     <p>Parent concern record · Texas Blaze CTX / Blaze Gibson tryout communication and player experience</p>
   </footer>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.querySelector('.theme-toggle');
+    const icon = document.querySelector('.toggle-icon');
+    const label = document.querySelector('.toggle-label');
+    const storageKey = 'nextgen-theme-v2';
+    const savedTheme = localStorage.getItem(storageKey);
+    const setTheme = (theme) => {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem(storageKey, theme);
+      const isLight = theme === 'light';
+      toggle.setAttribute('aria-pressed', String(isLight));
+      icon.textContent = isLight ? '🌙' : '☀️';
+      label.textContent = isLight ? 'Dark' : 'Light';
+    };
+    setTheme(savedTheme || 'light');
+    toggle.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+  </script>
 </body>
 </html>
