@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextGen Team Sites | Bala Roadmap Notes</title>
+  <meta name="description" content="Bala roadmap notes for NextGen Team Sites, Rally OS, and RallyIQ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .road-title{font-family:Anton,sans-serif;text-transform:uppercase;letter-spacing:-.03em;line-height:.88;font-size:clamp(3.4rem,8vw,7rem)}
+    .road-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:start}
+    .road-card{padding:1.5rem;border:1px solid var(--line);border-radius:28px;background:var(--card);box-shadow:var(--shadow-soft)}
+    .qa-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+    .answer-tag{color:var(--accent);font-weight:950;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;margin-bottom:.7rem}
+    .roadmap{display:grid;gap:1rem}.road-item{display:grid;grid-template-columns:64px 1fr;gap:1rem;padding:1.25rem;border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:var(--shadow-soft)}
+    .road-badge{display:grid;place-items:center;width:54px;height:54px;border-radius:18px;background:linear-gradient(135deg,var(--gold),#ffd85b);font-weight:950}.quote-box{padding:2rem;border-radius:32px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,211,67,.25),rgba(56,156,255,.14));box-shadow:var(--shadow)}.quote-box p{font-family:Anton,sans-serif;text-transform:uppercase;letter-spacing:-.02em;line-height:.95;font-size:clamp(2.4rem,6vw,5.5rem)}@media(max-width:850px){.road-hero,.qa-grid{grid-template-columns:1fr}.road-title{font-size:clamp(3rem,15vw,5rem)}}
+  </style>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a href="index.html" class="brand"><span class="brand-mark">NG</span><span><strong>NextGen</strong><small>Team Sites</small></span></a>
+    <nav class="desktop-nav"><a href="index.html">Home</a><a href="product.html">Product Visual</a><a href="team-ops-story.html">Team Ops</a><a href="#answers">Answers</a><a href="#roadmap" class="nav-cta">Roadmap</a></nav>
+  </header>
+  <main id="top">
+    <section class="section-pad road-hero">
+      <div class="hero-copy reveal-card">
+        <p class="eyebrow">Bala product notes</p>
+        <h1 class="road-title">GameChanger owns the game. NextGen owns the team brand.</h1>
+        <p class="hero-lede">Answers for Bala on target customers, business model, data strategy, and multi-tenant team sites for NextGen Team Site, Rally OS, and RallyIQ.</p>
+        <div class="hero-actions"><a class="btn primary" href="#answers">Read answers</a><a class="btn ghost" href="team-ops-story.html">Team Ops Story</a></div>
+      </div>
+      <aside class="road-card reveal-card"><p class="eyebrow">Core idea</p><h2>Do not replace GameChanger.</h2><p>In select softball, GameChanger is already the default scoring, streaming, video, recap, and stats platform. NextGen should sit around it as the branded public home for the team.</p></aside>
+    </section>
+    <section id="answers" class="section-pad compact">
+      <div class="section-heading left"><p class="eyebrow">Answers for Bala</p><h2>Four questions. One clear product lane.</h2></div>
+      <div class="qa-grid">
+        <article class="road-card"><div class="answer-tag">01 Target customers</div><h3>Who are the target customers?</h3><p>The buyer is the team, coach, club, or parent-run organization. The users are parents, family members, players, sponsors, and fans.</p></article>
+        <article class="road-card"><div class="answer-tag">02 Business model</div><h3>What is the business model?</h3><p>Start as team-site SaaS. Charge monthly or annually for a branded site with roster, schedule, player profiles, sponsors, media, fundraising, and GameChanger links.</p></article>
+        <article class="road-card"><div class="answer-tag">03 Game data</div><h3>How are we getting the data?</h3><p>Use manual entry, CSV/stat imports, and deep links first. Explore deeper integrations later where the platform rules allow it.</p></article>
+        <article class="road-card"><div class="answer-tag">04 Multi-tenant sites</div><h3>Does each customer get their own site?</h3><p>Yes. Every team gets its own branded site and domain experience, while the backend stays multi-tenant.</p></article>
+      </div>
+    </section>
+    <section class="section-pad compact"><div class="quote-box"><p>GameChanger is the field. NextGen is the front door, player showcase, sponsor layer, and story engine.</p></div></section>
+    <section id="roadmap" class="section-pad compact">
+      <div class="section-heading left"><p class="eyebrow">Product roadmap</p><h2>Build the branded layer first. Add intelligence second.</h2></div>
+      <div class="roadmap">
+        <div class="road-item"><div class="road-badge">1</div><div><h3>NextGen Team Site MVP</h3><p>Roster, schedule, player profiles, sponsors, photos, announcements, fundraising, and links to GameChanger.</p></div></div>
+        <div class="road-item"><div class="road-badge">2</div><div><h3>Team Admin OS</h3><p>Simple dashboard for coaches or parent admins to manage content once and publish it everywhere.</p></div></div>
+        <div class="road-item"><div class="road-badge">3</div><div><h3>Game Data Layer</h3><p>Import stats, link games, attach media, and enrich player pages without trying to beat GameChanger at scoring or streaming.</p></div></div>
+        <div class="road-item"><div class="road-badge">4</div><div><h3>RallyIQ</h3><p>AI-generated recaps, player summaries, weekly team stories, recruiting cards, highlight prompts, and sponsor reports.</p></div></div>
+        <div class="road-item"><div class="road-badge">5</div><div><h3>Rally OS</h3><p>Expand from one team to clubs, tournaments, multi-team organizations, fan engagement, sponsor inventory, and content automation.</p></div></div>
+      </div>
+    </section>
+    <section class="section-pad final-cta"><p class="eyebrow">Pitch note</p><h2>NextGen is the branded team layer.</h2><p>GameChanger is where the game gets scored and streamed. NextGen is the branded team site and RallyIQ is the intelligence layer that turns existing activity into player visibility, sponsor value, and automated team storytelling.</p><div class="hero-actions center"><a href="team-ops-story.html" class="btn primary">Team Ops Story</a><a href="index.html" class="btn ghost">Back home</a></div></section>
+  </main>
+  <footer class="site-footer"><p>NextGen Team Sites - Bala roadmap notes.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
