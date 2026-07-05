@@ -1,0 +1,44 @@
+{
+  "display_information": {
+    "name": "NextGen Team Roster",
+    "description": "Post team rosters and statlines from Slack slash commands.",
+    "background_color": "#111827"
+  },
+  "features": {
+    "slash_commands": [
+      {
+        "command": "/roster",
+        "url": "https://YOUR-WORKER-SUBDOMAIN.workers.dev/slack/roster",
+        "description": "Post a team roster with player statlines",
+        "usage_hint": "12u | 14u | help",
+        "should_escape": false
+      },
+      {
+        "command": "/venom12u",
+        "url": "https://YOUR-WORKER-SUBDOMAIN.workers.dev/slack/roster",
+        "description": "Post the Texas Venom 12U roster",
+        "usage_hint": "",
+        "should_escape": false
+      },
+      {
+        "command": "/venom14u",
+        "url": "https://YOUR-WORKER-SUBDOMAIN.workers.dev/slack/roster",
+        "description": "Post the Texas Venom 14U roster",
+        "usage_hint": "",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "commands"
+      ]
+    }
+  },
+  "settings": {
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false
+  }
+}
