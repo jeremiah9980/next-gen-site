@@ -96,6 +96,20 @@ The landing page now includes a prospect-facing screenshot gallery wired to thes
 - `assets/screenshots/05-ncs-tracker.svg`
 - `assets/screenshots/06-scoreboard.svg`
 
+## Slack roster commands
+
+The repo now includes a deployable Slack slash-command backend in `slack/`.
+
+Supported commands:
+
+- `/roster 12u`
+- `/roster 14u`
+- `/venom12u`
+- `/venom14u`
+- `/roster help`
+
+Roster commands respond publicly in the Slack channel with each girl's statline below her name. Setup instructions are in [`slack/README.md`](slack/README.md).
+
 ## Suggested sales close
 
 > For less than the cost of one tournament weekend, your team can have a professional site with roster cards, player profiles, social media, GameChanger-ready stats, NCS tournament tracking, and sponsor/fundraising visibility.
@@ -105,7 +119,10 @@ The landing page now includes a prospect-facing screenshot gallery wired to thes
 - `index.html` — landing page
 - `styles.css` — responsive site styling
 - `assets/screenshots/` — screenshot gallery assets used by the landing page
+- `slack/` — Slack slash-command backend, manifest, and setup guide
 
 ## Deployment options
 
 This is a static site and can be hosted on GitHub Pages, Netlify, Vercel, Cloudflare Pages, or any basic web host.
+
+Slack slash commands require an HTTPS POST endpoint, so the included roster command runs as a Cloudflare Worker rather than GitHub Pages static HTML.
