@@ -13,7 +13,7 @@ const TEAM_ROSTERS = {
     teamName: "Texas Venom",
     division: "12U",
     season: "2026 Summer",
-    lastUpdated: "Edit roster-command-worker.js with live team stats",
+    lastUpdated: "Demo data — replace with approved live team stats",
     commandAliases: ["/roster 12u", "/venom12u"],
     players: [
       {
@@ -31,7 +31,7 @@ const TEAM_ROSTERS = {
         stats: { AVG: ".367", OBP: ".448", OPS: ".901", RBI: "21", ERA: "2.18", K: "46" }
       },
       {
-        name: "Kassidy C.",
+        name: "Player 21",
         jersey: "21",
         positions: ["3B", "C", "P"],
         batsThrows: "R/R",
@@ -57,7 +57,7 @@ const TEAM_ROSTERS = {
     teamName: "Texas Venom",
     division: "14U",
     season: "2026 Summer",
-    lastUpdated: "Edit roster-command-worker.js with live team stats",
+    lastUpdated: "Demo data — replace with approved live team stats",
     commandAliases: ["/roster 14u", "/venom14u"],
     players: [
       {
