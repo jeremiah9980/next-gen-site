@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NextGen Team Site Blitz</title>
+<style>
+:root{--ink:#07111f;--muted:#5d6878;--yellow:#ffbe18;--blue:#1288d4;--paper:#f6f8fc;--line:rgba(7,17,31,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(rgba(20,90,160,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(20,90,160,.06) 1px,transparent 1px),radial-gradient(circle at 12% 8%,rgba(40,150,240,.18),transparent 28rem),radial-gradient(circle at 90% 28%,rgba(255,190,24,.22),transparent 30rem),var(--paper);background-size:48px 48px,48px 48px,auto,auto,auto}
+.wrap{width:min(1120px,calc(100% - 32px));margin:auto}.top{position:sticky;top:0;z-index:10;background:rgba(246,248,252,.86);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:92px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:14px;align-items:center;text-decoration:none}.mark{width:62px;height:62px;border-radius:19px;background:linear-gradient(145deg,#ffd95d,#ffad00);display:grid;place-items:center;font-size:23px;font-weight:1000;box-shadow:0 12px 28px rgba(255,174,0,.3)}.brand b{font-size:23px}.brand span{display:block;font-size:12px;font-weight:900;letter-spacing:.25em;color:#344056}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 24px;border-radius:999px;background:var(--yellow);text-decoration:none;font-weight:1000;border:1px solid transparent}.btn.alt{background:#fff;border-color:var(--line)}
+.hero{padding:80px 0 38px}.eyebrow{font-size:14px;font-weight:1000;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}h1,h2{font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:0}h1{font-size:clamp(60px,10vw,128px);line-height:.82;max-width:980px}h2{font-size:clamp(42px,6vw,76px);line-height:.92;margin-bottom:20px}.lime{color:#99cf00;text-shadow:0 2px 0 #304d00}.lead{max-width:840px;font-size:clamp(19px,2.2vw,27px);line-height:1.45;color:#394457}.actions{display:flex;gap:12px;flex-wrap:wrap}.section{padding:52px 0}
+.grid2{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.95);border-radius:32px;padding:28px;box-shadow:0 22px 65px rgba(24,43,76,.13)}.dark{background:linear-gradient(135deg,#07111f,#152943);color:#fff;overflow:hidden}.dark p{color:#d7e0ec}.big{font:1000 clamp(82px,12vw,150px)/.86 Impact,sans-serif;color:var(--yellow)}h3{font-size:25px;margin:0 0 10px;letter-spacing:-.03em}.card p{line-height:1.65;color:var(--muted)}.dark .card p{color:#fff}.slots{display:grid;grid-template-columns:repeat(10,1fr);gap:7px;margin-top:22px}.slot{aspect-ratio:1;border-radius:13px;background:#fff;color:var(--ink);display:grid;place-items:center;font-weight:1000}.slot:first-child{background:var(--yellow)}
+.count{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:20px}.time{padding:14px;border-radius:17px;background:#f2f5fa;text-align:center}.time b{font-size:34px;display:block}.time span{font-size:10px;letter-spacing:.12em;text-transform:uppercase}.num{font:900 52px/1 Impact,sans-serif;color:var(--yellow)}.tag{display:inline-block;padding:8px 12px;border-radius:999px;background:#e8f7ef;color:#116841;font-size:12px;font-weight:1000;text-transform:uppercase;letter-spacing:.07em}.raffle{background:linear-gradient(145deg,#1c0b2e,#3b1761);color:#fff}.raffle p{color:#ddd1eb}.ticket{border:2px dashed rgba(255,255,255,.35);border-radius:22px;padding:20px;margin-top:16px}.ticket strong{font-size:23px;color:var(--yellow)}.fine{font-size:12px;color:#6c7787;line-height:1.5}
+.plan{display:grid;grid-template-columns:.78fr 1.22fr;gap:18px}.week{display:grid;grid-template-columns:105px 1fr;gap:18px;padding:20px 0;border-top:1px solid var(--line)}.week:first-child{border-top:0}.week>b{color:var(--blue);text-transform:uppercase;letter-spacing:.07em}.post{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px 17px;margin:10px 0}.post strong{display:block;margin-bottom:5px}.copy{white-space:pre-wrap;background:#07111f;color:#edf3fb;border-radius:20px;padding:20px;font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;overflow:auto}.steps{counter-reset:s}.step{display:grid;grid-template-columns:52px 1fr;gap:15px;padding:16px 0;border-top:1px solid rgba(7,17,31,.12)}.step:before{counter-increment:s;content:counter(s);width:44px;height:44px;border-radius:14px;background:#fff;display:grid;place-items:center;font-weight:1000}footer{padding:48px 0 75px;color:#687486}
+@media(max-width:800px){.grid2,.grid3,.plan{grid-template-columns:1fr}.slots{grid-template-columns:repeat(5,1fr)}.hero{padding-top:55px}.card{padding:22px}.nav .btn{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav">
+<a class="brand" href="https://next-gen-team.site/"><div class="mark">NG</div><div><b>NextGen</b><span>TEAM SITES</span></div></a>
+<a class="btn" href="#commit">Claim a spot</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+<div class="eyebrow">2026 launch campaign</div>
+<h1>THE NEXTGEN<br><span class="lime">FIRST 10 BLITZ</span></h1>
+<p class="lead">Commit the first 10 youth softball teams to begin onboarding before the 2026 NFL regular-season kickoff. One link. One team hub. Less communication chaos.</p>
+<div class="actions"><a class="btn" href="#commit">Reserve a team spot</a><a class="btn alt" href="#raffle">Venom donation drawing</a></div>
+<div class="grid2" style="margin-top:38px">
+<div class="card dark"><small>BLITZ GOAL</small><div class="big">10</div><h3>Teams committed and ready to start onboarding by September 9, 2026.</h3><div class="slots"><div class="slot">1</div><div class="slot">2</div><div class="slot">3</div><div class="slot">4</div><div class="slot">5</div><div class="slot">6</div><div class="slot">7</div><div class="slot">8</div><div class="slot">9</div><div class="slot">10</div></div></div>
+<div class="card"><small>KICKOFF CLOCK</small><h3 style="margin-top:12px">Beat the deadline.</h3><p>The campaign closes at the start of the 2026 NFL regular season.</p><div class="count"><div class="time"><b id="days">--</b><span>days</span></div><div class="time"><b id="hours">--</b><span>hours</span></div><div class="time"><b id="mins">--</b><span>minutes</span></div><div class="time"><b id="secs">--</b><span>seconds</span></div></div></div>
+</div></div></section>
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">The launch offer</div><h2>THREE REASONS TO MOVE NOW.</h2>
+<div class="grid3">
+<article class="card"><div class="num">01</div><h3>First Fab 5</h3><span class="tag">Founding-team offer</span><p>The first five qualified teams that commit receive <strong>50% off standard launch pricing</strong> for the agreed introductory term.</p></article>
+<article class="card"><div class="num">02</div><h3>Teams 6–10</h3><span class="tag">Founding cohort</span><p>Priority onboarding, launch recognition, and direct influence on the early team-dashboard roadmap.</p></article>
+<article class="card raffle" id="raffle"><div class="num">03</div><h3>Venom donation drawing</h3><div class="ticket"><strong>WIN 1 TEAM-SITE SPOT</strong><p>Verified donations supporting the Venom team earn entries into a drawing for one promotional NextGen Team Site onboarding spot.</p></div></article>
+</div>
+<p class="fine">Publish official rules before launch, including eligible donation amounts, entry limits, drawing date, geographic eligibility, prize value, tax treatment, and a free alternative method of entry. Review local raffle and charitable-gaming requirements before accepting entries.</p>
+</div></section>
+
+<section class="section" id="content"><div class="wrap">
+<div class="eyebrow">Content strategy</div><h2>BUILD PROOF. URGENCY. THE LIST.</h2>
+<div class="plan">
+<aside class="card"><h3>Campaign rhythm</h3><p><strong>3 feed posts weekly</strong><br>Monday problem, Wednesday proof, Friday offer.</p><p><strong>4–6 Stories weekly</strong><br>Polls, screenshots, countdowns, FAQs, and team shout-outs.</p><p><strong>1 short video weekly</strong><br>Coach pain point, walkthrough, or onboarding update.</p><p><strong>1 outreach block weekly</strong><br>Message 10 coaches, team parents, or club directors with a personalized demo.</p></aside>
+<div class="card">
+<div class="week"><b>Week 1<br>Problem</b><div><div class="post"><strong>The coach should not be the help desk.</strong>Use the communication overload graphic and ask how many places team information lives.</div><div class="post"><strong>One-link audit.</strong>Carousel: schedule, roster, uniforms, fields, sponsors, fundraising, and GameChanger links.</div><div class="post"><strong>Launch the First 10.</strong>Reveal the goal, deadline, and First Fab 5 discount.</div></div></div>
+<div class="week"><b>Week 2<br>Proof</b><div><div class="post"><strong>Texas Venom example.</strong>Show scattered operations versus one branded team hub.</div><div class="post"><strong>60-second walkthrough.</strong>Mobile tour of roster, schedule, sponsors, and player profiles.</div><div class="post"><strong>Coach FAQ.</strong>Explain who updates the site, how GameChanger fits, and onboarding time.</div></div></div>
+<div class="week"><b>Week 3<br>Community</b><div><div class="post"><strong>Venom fundraiser announcement.</strong>Explain the cause, entry method, prize, and rules link.</div><div class="post"><strong>Why sponsors care.</strong>Show a sponsor card and year-round local visibility.</div><div class="post"><strong>Founding-team spotlight.</strong>Feature each committed team and update the tracker.</div></div></div>
+<div class="week"><b>Week 4+<br>Urgency</b><div><div class="post"><strong>Spots remaining.</strong>Update the tracker whenever a team commits.</div><div class="post"><strong>Kickoff countdown.</strong>“NFL kickoff is X days away. Is your team’s digital home ready?”</div><div class="post"><strong>Last call.</strong>Offer, remaining spots, onboarding date, one CTA.</div></div></div>
+</div></div></div></section>
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">Ready-to-schedule copy</div><h2>POSTS YOU CAN USE NOW.</h2>
+<div class="grid3">
+<article class="card"><h3>Launch post</h3><div class="copy">🏈 THE FIRST 10 BLITZ IS LIVE.
+
+Our goal: commit the first 10 youth softball teams to begin NextGen onboarding before the 2026 NFL regular season kicks off.
+
+The First Fab 5 receive 50% off standard launch pricing.
+
+One link for schedules, rosters, player profiles, tournament information, sponsors, fundraising and GameChanger links.
+
+Comment “NEXTGEN” or message us to reserve a team demo.</div></article>
+<article class="card"><h3>Problem post</h3><div class="copy">How many places does your team information live?
+
+GameChanger. BAND. Group texts. Tournament apps. Social media. Spreadsheets. Screenshots.
+
+NextGen does not replace the tools your team already uses. It gives families one branded place to find the right link, schedule and latest information.
+
+One link. One team hub. Less noise.</div></article>
+<article class="card"><h3>Drawing post</h3><div class="copy">🥎 SUPPORT VENOM. HELP A TEAM GO NEXTGEN.
+
+We are building donation entries toward a promotional drawing for one NextGen Team Site onboarding spot.
+
+Support the Venom team and help a youth team earn a professional digital home.
+
+Official rules: [LINK]
+Donate / enter: [LINK]</div></article>
+</div></div></section>
+
+<section class="section" id="commit"><div class="wrap"><div class="card" style="background:linear-gradient(135deg,#ffe178,#ffbd12)">
+<div class="eyebrow" style="color:#07111f">Conversion path</div><h2>ONE CTA. THREE QUICK STEPS.</h2>
+<div class="steps"><div class="step"><div><h3>Submit the inquiry</h3><p>Team name, age group, season, and primary contact.</p></div></div><div class="step"><div><h3>Complete a 20-minute fit call</h3><p>Confirm scope, current tools, content owner, domain, and onboarding window.</p></div></div><div class="step"><div><h3>Commit and reserve onboarding</h3><p>Sign the launch agreement, pay the deposit, and receive the content checklist.</p></div></div></div>
+<a class="btn alt" href="https://next-gen-team.site/">Start a team inquiry</a>
+</div></div></section>
+</main>
+
+<footer><div class="wrap"><strong>NextGen Team Sites</strong><br>GameChanger tracks the game. NextGen tells the team’s story.</div></footer>
+<script>
+const end=new Date("2026-09-09T20:20:00-04:00").getTime();
+function tick(){let d=Math.max(0,end-Date.now());let days=Math.floor(d/86400000);d%=86400000;let h=Math.floor(d/3600000);d%=3600000;let m=Math.floor(d/60000);d%=60000;let s=Math.floor(d/1000);daysEl=document.getElementById("days");daysEl.textContent=days;document.getElementById("hours").textContent=String(h).padStart(2,"0");document.getElementById("mins").textContent=String(m).padStart(2,"0");document.getElementById("secs").textContent=String(s).padStart(2,"0")}tick();setInterval(tick,1000);
+</script>
+</body></html>
