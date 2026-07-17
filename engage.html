@@ -1,141 +1,337 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Engage Next Gen Team Site | Customer Inquiry</title>
-  <meta name="description" content="Submit an inquiry to engage Next Gen Team Site for a youth sports team website package." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    .engage-hero{padding:5.5rem clamp(1rem,4vw,4rem) 2.4rem;text-align:center}.engage-hero h1{max-width:980px;margin:0 auto 1rem}.engage-hero p{max-width:760px;margin:0 auto;color:var(--muted);font-size:1.12rem}.form-shell{max-width:1180px;margin:0 auto;padding:1.5rem clamp(1rem,4vw,4rem) 4.5rem}.form-layout{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:1rem}.engage-panel,.form-card{border:1px solid color-mix(in srgb,var(--blue) 28%,transparent);border-radius:28px;background:var(--surface);box-shadow:var(--shadow)}.engage-panel{padding:1.4rem;align-self:start}.engage-panel h2{font-size:clamp(2rem,4vw,3.4rem);margin-bottom:.75rem}.engage-panel p{color:var(--muted)}.quick-list{display:grid;gap:.75rem;margin:1.1rem 0 0}.quick-list div{padding:.9rem;border:1px solid var(--line);border-radius:18px;background:var(--surface-2)}.quick-list strong{display:block;color:var(--blue-2);text-transform:uppercase;letter-spacing:.07em;font-size:.78rem}.quick-list span{display:block;color:var(--text);margin-top:.25rem}.form-card{padding:1.35rem}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.field{display:grid;gap:.42rem}.field.full{grid-column:1/-1}.field label{font-weight:900;color:var(--text);text-transform:uppercase;letter-spacing:.08em;font-size:.76rem}.field input,.field select,.field textarea{width:100%;min-height:48px;border:1px solid var(--line);border-radius:14px;background:var(--surface-2);color:var(--text);padding:.85rem .95rem;font:inherit}.field textarea{min-height:132px;resize:vertical}.field input::placeholder,.field textarea::placeholder{color:var(--muted)}.check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;margin-top:.25rem}.check-grid label,.consent{display:flex;align-items:flex-start;gap:.55rem;padding:.75rem;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--text);font-weight:700}.check-grid input,.consent input{margin-top:.25rem}.form-actions{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;margin-top:1.2rem}.form-note{margin-top:.9rem;color:var(--muted);font-size:.9rem}.activation-note{margin-bottom:1rem;padding:1rem;border-radius:18px;border:1px solid color-mix(in srgb,var(--green) 38%,transparent);background:color-mix(in srgb,var(--green) 9%,transparent);color:var(--text)}.activation-note strong{color:var(--green)}.status-box{display:none;margin-top:1rem;padding:1rem;border-radius:18px;border:1px solid color-mix(in srgb,var(--green) 38%,transparent);background:color-mix(in srgb,var(--green) 9%,transparent);color:var(--text)}.status-box.error{border-color:color-mix(in srgb,var(--red) 45%,transparent);background:color-mix(in srgb,var(--red) 9%,transparent);color:var(--text)}.hidden-honey{position:absolute;left:-9999px}@media(max-width:900px){.form-layout,.form-grid,.check-grid{grid-template-columns:1fr}.form-actions .btn{width:100%}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engage NextGen Team Sites | Start Your Inquiry</title>
+<meta name="description" content="Start an inquiry to engage NextGen Team Sites — Founding Team pricing at more than 50% off market. Tell us about your team, package interest, and timeline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --bg:#070B16;
+  --bg-2:#0A0F1E;
+  --card:#111827;
+  --card-2:#151D30;
+  --line:rgba(148,163,184,.13);
+  --line-strong:rgba(148,163,184,.24);
+  --text:#F1F5F9;
+  --text-2:#94A3B8;
+  --text-3:#64748B;
+  --blue:#38BDF8;
+  --blue-deep:#2563EB;
+  --purple:#8B5CF6;
+  --gold:#FBBF24;
+  --gold-deep:#D97706;
+  --green:#34D399;
+  --red:#FB7185;
+  --glass:rgba(17,24,39,.62);
+  --glass-brd:rgba(148,163,184,.16);
+  --shadow-lg:0 24px 70px -18px rgba(2,6,23,.85);
+  --shadow-md:0 14px 40px -14px rgba(2,6,23,.7);
+  --grad-hero:linear-gradient(120deg,#38BDF8 0%,#8B5CF6 48%,#FBBF24 100%);
+  --grad-blue:linear-gradient(135deg,#38BDF8,#2563EB);
+  --grad-purple:linear-gradient(135deg,#8B5CF6,#6D28D9);
+  --grad-gold:linear-gradient(135deg,#FBBF24,#D97706);
+  --nav-h:72px;
+  --r-lg:22px;
+  --r-md:16px;
+  --r-sm:12px;
+  --ease:cubic-bezier(.22,.61,.2,1);
+}
+html[data-theme="light"]{
+  --bg:#F6F8FC;
+  --bg-2:#EDF1F8;
+  --card:#FFFFFF;
+  --card-2:#F3F6FC;
+  --line:rgba(15,23,42,.09);
+  --line-strong:rgba(15,23,42,.18);
+  --text:#0B1220;
+  --text-2:#44506B;
+  --text-3:#68748F;
+  --glass:rgba(255,255,255,.72);
+  --glass-brd:rgba(15,23,42,.1);
+  --shadow-lg:0 24px 70px -22px rgba(15,23,42,.28);
+  --shadow-md:0 14px 40px -18px rgba(15,23,42,.2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Instrument Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+  transition:background .5s var(--ease),color .5s var(--ease);
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:rgba(139,92,246,.4)}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+h1,h2,h3,.display{font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.02em}
+.mono{font-family:'JetBrains Mono',monospace}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ================= BACKGROUND ATMOSPHERE ================= */
+.atmo{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.atmo .grid-lines{
+  position:absolute;inset:-2px;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 0%,transparent 72%);
+  -webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 0%,transparent 72%);
+  opacity:.55;
+}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.32;animation:orbFloat 18s ease-in-out infinite alternate;will-change:transform}
+.orb.b{width:640px;height:640px;background:radial-gradient(circle,#2563EB,transparent 65%);top:-220px;left:-140px}
+.orb.p{width:560px;height:560px;background:radial-gradient(circle,#7C3AED,transparent 65%);top:-120px;right:-160px;animation-delay:-6s}
+html[data-theme="light"] .orb{opacity:.18}
+@keyframes orbFloat{
+  0%{transform:translate(0,0) scale(1)}
+  100%{transform:translate(60px,44px) scale(1.08)}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+/* ================= SHARED UI ================= */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-2);
+  border:1px solid var(--line-strong);border-radius:999px;padding:8px 16px;background:var(--glass);backdrop-filter:blur(10px)}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--grad-hero);box-shadow:0 0 12px rgba(139,92,246,.9)}
+.grad-text{background:var(--grad-hero);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:9px;border-radius:14px;padding:15px 28px;font-weight:600;font-size:.98rem;border:1px solid transparent;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s,border-color .3s;position:relative;overflow:hidden}
+.btn-primary{background:var(--grad-blue);color:#fff;box-shadow:0 10px 30px -8px rgba(37,99,235,.55)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 42px -10px rgba(37,99,235,.7)}
+.btn-ghost{background:var(--glass);border-color:var(--glass-brd);color:var(--text);backdrop-filter:blur(10px)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--line-strong);box-shadow:var(--shadow-md)}
+
+/* ================= NAV ================= */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(18px) saturate(150%);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1240px;margin:0 auto;height:100%;padding:0 24px;display:flex;align-items:center;gap:26px}
+.logo{display:flex;align-items:center;gap:11px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.08rem;letter-spacing:-.01em}
+.logo-mark{width:34px;height:34px;border-radius:10px;background:var(--grad-hero);display:grid;place-items:center;color:#fff;font-weight:800;font-size:.9rem;box-shadow:0 6px 18px -4px rgba(139,92,246,.6);position:relative;overflow:hidden}
+.logo-mark::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.5),transparent 55%)}
+.logo small{display:block;font-family:'JetBrains Mono',monospace;font-size:.56rem;letter-spacing:.24em;color:var(--text-3);font-weight:500;text-transform:uppercase}
+.nav-links{display:flex;gap:4px;margin-left:auto}
+.nav-links a{padding:9px 14px;border-radius:10px;font-size:.9rem;color:var(--text-2);font-weight:500;transition:color .25s,background .25s}
+.nav-links a:hover{color:var(--text);background:var(--glass)}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.theme-btn{width:40px;height:40px;border-radius:11px;border:1px solid var(--line-strong);background:var(--glass);color:var(--text-2);display:grid;place-items:center;transition:all .3s var(--ease)}
+.theme-btn:hover{color:var(--text);transform:rotate(18deg) scale(1.06)}
+.theme-btn svg{width:17px;height:17px}
+@media(max-width:760px){.nav-links{display:none}}
+
+/* ================= ENGAGE HERO ================= */
+.engage-hero{padding:calc(var(--nav-h) + 70px) 0 30px;text-align:center}
+.engage-hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:750;line-height:1.08;max-width:860px;margin:24px auto 16px}
+.engage-hero p{color:var(--text-2);font-size:1.1rem;max-width:640px;margin:0 auto}
+
+/* ================= FORM LAYOUT ================= */
+.form-shell{padding:40px 0 110px}
+.form-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:22px;align-items:start}
+.engage-panel,.form-card{border-radius:var(--r-lg);background:var(--card);border:1px solid var(--line-strong);box-shadow:var(--shadow-md)}
+.engage-panel{padding:30px}
+.engage-panel h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:750;margin:16px 0 12px}
+.engage-panel > p{color:var(--text-2);font-size:.95rem}
+.quick-list{display:grid;gap:12px;margin-top:20px}
+.quick-list div{padding:15px 17px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--card-2)}
+.quick-list strong{display:block;font-family:'JetBrains Mono',monospace;color:var(--blue);text-transform:uppercase;letter-spacing:.14em;font-size:.66rem}
+.quick-list span{display:block;color:var(--text-2);margin-top:5px;font-size:.88rem}
+.founding-callout{margin-top:20px;padding:17px;border-radius:var(--r-md);border:1px solid rgba(251,191,36,.32);background:linear-gradient(140deg,rgba(251,191,36,.1),rgba(139,92,246,.08))}
+.founding-callout strong{display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.founding-callout span{font-size:.88rem;color:var(--text-2)}
+.founding-callout b{color:var(--text)}
+.form-card{padding:30px}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.field{display:grid;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-family:'JetBrains Mono',monospace;font-weight:600;color:var(--text-2);text-transform:uppercase;letter-spacing:.12em;font-size:.66rem}
+.field input,.field select,.field textarea{width:100%;min-height:48px;border:1px solid var(--line-strong);border-radius:var(--r-sm);background:var(--card-2);color:var(--text);padding:.8rem .95rem;font:inherit;font-size:.94rem;transition:border-color .25s,box-shadow .25s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(56,189,248,.18)}
+.field textarea{min-height:130px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:var(--text-3)}
+.check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:2px}
+.check-grid label,.field label.consent{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--card-2);color:var(--text-2);font-weight:500;font-size:.88rem;cursor:pointer;transition:border-color .25s,color .25s;font-family:'Instrument Sans',sans-serif;text-transform:none;letter-spacing:0}
+.check-grid label:hover,.consent:hover{border-color:var(--line-strong);color:var(--text)}
+.field .check-grid input,.field .consent input{width:16px;height:16px;min-height:0;margin-top:.28rem;flex-shrink:0;accent-color:#2563EB}
+.form-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:24px}
+.form-note{margin-top:16px;color:var(--text-3);font-size:.82rem}
+.status-box{display:none;margin-top:16px;padding:15px 17px;border-radius:var(--r-md);border:1px solid rgba(52,211,153,.38);background:rgba(52,211,153,.09);color:var(--text);font-size:.9rem}
+.status-box.error{border-color:rgba(251,113,133,.45);background:rgba(251,113,133,.09)}
+.hidden-honey{position:absolute;left:-9999px}
+@media(max-width:900px){.form-layout,.form-grid,.check-grid{grid-template-columns:1fr}.form-actions .btn{width:100%;justify-content:center}}
+
+/* ================= FOOTER ================= */
+footer{border-top:1px solid var(--line);padding:34px 0;background:color-mix(in srgb,var(--bg-2) 60%,transparent)}
+.foot-base{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;color:var(--text-3);font-size:.78rem;font-family:'JetBrains Mono',monospace}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <a href="index.html" class="brand"><span class="brand-mark">NG</span><span><strong>Next Gen</strong><small>Team Site</small></span></a>
-    <nav class="desktop-nav"><a href="index.html#pricing">Pricing</a><a href="product.html">Product Visual</a><a href="engage.html" class="nav-cta">Engage</a></nav>
-    <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" aria-pressed="true">
-      <span class="toggle-icon">🌙</span>
-      <span class="toggle-label">Dark</span>
-    </button>
-  </header>
 
-  <main>
-    <section class="engage-hero">
-      <p class="eyebrow">Customer inquiry form</p>
-      <h1>Ready to build a team site?</h1>
-      <p>Tell us about your team, package interest, timeline, and must-have features. This form is designed for coaches, team parents, directors, and organizations that want to engage Next Gen Team Site.</p>
-    </section>
+<div class="atmo">
+  <div class="grid-lines"></div>
+  <div class="orb b"></div><div class="orb p"></div>
+</div>
 
-    <section class="form-shell">
-      <div class="form-layout">
-        <aside class="engage-panel">
-          <p class="eyebrow">What happens next</p>
-          <h2>Start the conversation.</h2>
-          <p>Once the inquiry is submitted, the next step is a quick scope review: team brand, roster size, GameChanger/NCS links, player profile needs, sponsor/fundraising goals, and launch timeline.</p>
-          <div class="quick-list">
-            <div><strong>1. Pick a package</strong><span>Starter, Pro, Elite, or Organization.</span></div>
-            <div><strong>2. Share team assets</strong><span>Logo, colors, roster, photos, links, sponsors, and tournament sources.</span></div>
-            <div><strong>3. Launch the hub</strong><span>One professional link for parents, players, fans, sponsors, and coaches.</span></div>
-          </div>
-        </aside>
+<!-- ============ NAV ============ -->
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">N</span>
+      <span>NextGen<small>Team Sites</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#demo">Demo Sites</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#founding">Founding Teams</a>
+    </div>
+    <div class="nav-cta">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle light / dark mode">
+        <svg class="ico-moon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.35 15.35A9 9 0 1 1 8.65 3.65 7 7 0 0 0 20.35 15.35Z"/></svg>
+        <svg class="ico-sun" style="display:none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
 
-        <form id="engageForm" class="form-card" action="https://formspree.io/f/mzdlvyae" method="POST">
-          <div class="activation-note"><strong>Delivery note:</strong> This form now uses Formspree form ID <code>mzdlvyae</code>. Submissions should appear in Formspree and route according to that form’s notification settings.</div>
-          <input type="hidden" name="_subject" value="New Next Gen Team Site Inquiry" />
-          <input type="hidden" name="source_page" value="https://jeremiah9980.github.io/next-gen-site/engage.html" />
-          <input class="hidden-honey" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="engage-hero">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>Customer Inquiry · Founding Team Pricing</span>
+      <h1>Ready to Build Your Team a <span class="grad-text">Professional Home?</span></h1>
+      <p>Tell us about your team, package interest, timeline, and must-have features. Built for coaches, team parents, directors, and organizations ready to engage NextGen Team Sites.</p>
+    </div>
+  </section>
 
-          <div class="form-grid">
-            <div class="field"><label for="name">Your name *</label><input id="name" name="name" type="text" required placeholder="Coach / parent / director name" /></div>
-            <div class="field"><label for="role">Your role *</label><select id="role" name="role" required><option value="">Select role</option><option>Coach</option><option>Team parent</option><option>Organization director</option><option>Player development / media</option><option>Sponsor / donor</option><option>Other</option></select></div>
-            <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required placeholder="you@example.com" /></div>
-            <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="Best callback number" /></div>
-            <div class="field"><label for="team">Team / organization *</label><input id="team" name="team_or_organization" type="text" required placeholder="Example: Texas Venom 10U" /></div>
-            <div class="field"><label for="location">City / state</label><input id="location" name="city_state" type="text" placeholder="Example: Georgetown, TX" /></div>
-            <div class="field"><label for="sport">Sport</label><select id="sport" name="sport"><option>Softball</option><option>Baseball</option><option>Volleyball</option><option>Basketball</option><option>Soccer</option><option>Football</option><option>Other</option></select></div>
-            <div class="field"><label for="division">Age / division</label><input id="division" name="age_division" type="text" placeholder="10U, 12U, 14U, high school, etc." /></div>
-            <div class="field"><label for="package">Package interest *</label><select id="package" name="package_interest" required><option value="">Select package</option><option>Starter — Team Launch</option><option>Pro — Player Visibility Hub</option><option>Elite — Tournament Command Center</option><option>Organization — Multi-Team System</option><option>Not sure yet</option></select></div>
-            <div class="field"><label for="timeline">Desired timeline</label><select id="timeline" name="desired_timeline"><option>ASAP</option><option>1–2 weeks</option><option>Before next tournament</option><option>Before fall season</option><option>Just exploring</option></select></div>
+  <!-- ============ FORM ============ -->
+  <section class="form-shell">
+    <div class="wrap form-layout">
+      <aside class="engage-panel">
+        <span class="eyebrow"><span class="dot"></span>What Happens Next</span>
+        <h2>Start the conversation.</h2>
+        <p>Once your inquiry is submitted, the next step is a quick scope review: team brand, roster size, GameChanger/NCS links, player profile needs, sponsor and fundraising goals, and launch timeline.</p>
+        <div class="quick-list">
+          <div><strong>1 · Pick a package</strong><span>Basic, Pro, or Elite — or claim a Founding Team spot.</span></div>
+          <div><strong>2 · Share team assets</strong><span>Logo, colors, roster, photos, links, sponsors, and tournament sources.</span></div>
+          <div><strong>3 · Launch the hub</strong><span>One professional link for parents, players, fans, sponsors, and coaches — usually live in under a week.</span></div>
+        </div>
+        <div class="founding-callout">
+          <strong>★ Founding Team Pricing</strong>
+          <span>Plan prices are now <b>Founding Team pricing — more than 50% off market pricing models</b>: Basic <b>$249</b> one-time, Pro <b>$499 + $39/mo</b>, Elite <b>$749 + $49/mo</b>. Locked for life for the first 10 Founding Teams.</span>
+        </div>
+      </aside>
 
-            <div class="field full"><label>Features needed</label><div class="check-grid">
-              <label><input type="checkbox" name="features" value="Home + social hub"> Home + social hub</label>
-              <label><input type="checkbox" name="features" value="Roster cards"> Roster cards</label>
-              <label><input type="checkbox" name="features" value="Player profiles"> Player profiles</label>
-              <label><input type="checkbox" name="features" value="GameChanger schedule/stats"> GameChanger schedule/stats</label>
-              <label><input type="checkbox" name="features" value="NCS tournament tracker"> NCS tournament tracker</label>
-              <label><input type="checkbox" name="features" value="Fundraising + sponsors"> Fundraising + sponsors</label>
-            </div></div>
+      <form id="engageForm" class="form-card" action="https://formspree.io/f/mzdlvyae" method="POST">
+        <input type="hidden" name="_subject" value="New NextGen Team Sites Inquiry" />
+        <input type="hidden" name="source_page" value="https://next-gen-team.site/engage.html" />
+        <input class="hidden-honey" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
 
-            <div class="field full"><label for="links">Current team links</label><textarea id="links" name="current_links" placeholder="Paste GameChanger, NCS, Facebook, Instagram, team website, sponsor links, or other relevant URLs."></textarea></div>
-            <div class="field full"><label for="message">What are you trying to build? *</label><textarea id="message" name="message" required placeholder="Tell us what the team needs, what problem you want solved, and anything important about the season/tournament timeline."></textarea></div>
-            <div class="field full"><label class="consent"><input type="checkbox" name="consent" required value="Confirmed"> I understand this is an inquiry form and I will not submit private child/player information beyond high-level team needs.</label></div>
-          </div>
+        <div class="form-grid">
+          <div class="field"><label for="name">Your name *</label><input id="name" name="name" type="text" required placeholder="Coach / parent / director name" /></div>
+          <div class="field"><label for="role">Your role *</label><select id="role" name="role" required><option value="">Select role</option><option>Coach</option><option>Team parent</option><option>Organization director</option><option>Player development / media</option><option>Sponsor / donor</option><option>Other</option></select></div>
+          <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required placeholder="you@example.com" /></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="Best callback number" /></div>
+          <div class="field"><label for="team">Team / organization *</label><input id="team" name="team_or_organization" type="text" required placeholder="Example: Bombers Fastpitch 12U" /></div>
+          <div class="field"><label for="location">City / state</label><input id="location" name="city_state" type="text" placeholder="Example: Georgetown, TX" /></div>
+          <div class="field"><label for="sport">Sport</label><select id="sport" name="sport"><option>Softball</option><option>Baseball</option><option>Volleyball</option><option>Basketball</option><option>Soccer</option><option>Football</option><option>Other</option></select></div>
+          <div class="field"><label for="division">Age / division</label><input id="division" name="age_division" type="text" placeholder="10U, 12U, 14U, high school, etc." /></div>
+          <div class="field"><label for="package">Package interest *</label><select id="package" name="package_interest" required><option value="">Select package</option><option value="Basic — $249 one-time (Founding Team pricing)">Basic — $249 one-time (Founding)</option><option value="Pro — $499 + $39/mo (Founding Team pricing)">Pro — $499 + $39/mo (Founding)</option><option value="Elite — $749 + $49/mo (Founding Team pricing)">Elite — $749 + $49/mo (Founding)</option><option value="Founding Team spot — any tier">Founding Team spot — any tier</option><option value="Organization / multi-team — custom scope">Organization / multi-team — custom scope</option><option value="Not sure yet">Not sure yet</option></select></div>
+          <div class="field"><label for="timeline">Desired timeline</label><select id="timeline" name="desired_timeline"><option>ASAP</option><option>1–2 weeks</option><option>Before next tournament</option><option>Before fall season</option><option>Just exploring</option></select></div>
 
-          <div class="form-actions"><button class="btn primary" type="submit">Submit inquiry</button><a class="btn ghost" href="mailto:jeremiahcargill@gmail.com?subject=Next%20Gen%20Team%20Site%20Inquiry">Email instead</a><a class="btn ghost" href="index.html#pricing">Review packages</a></div>
-          <p class="form-note">After submission, the page will redirect to the local thank-you page. If the network request fails, the message below will show the issue.</p>
-          <div id="formStatus" class="status-box" role="status"></div>
-        </form>
-      </div>
-    </section>
-  </main>
+          <div class="field full"><label>Features needed</label><div class="check-grid">
+            <label><input type="checkbox" name="features" value="Team home page + social hub"> Team home page + social hub</label>
+            <label><input type="checkbox" name="features" value="Roster cards"> Roster cards</label>
+            <label><input type="checkbox" name="features" value="Player profiles"> Player profiles</label>
+            <label><input type="checkbox" name="features" value="GameChanger schedule/stats"> GameChanger schedule/stats</label>
+            <label><input type="checkbox" name="features" value="NCS tournament tracker"> NCS tournament tracker</label>
+            <label><input type="checkbox" name="features" value="Schedule dashboard"> Schedule dashboard</label>
+            <label><input type="checkbox" name="features" value="Fundraising + sponsors"> Fundraising + sponsors</label>
+            <label><input type="checkbox" name="features" value="Video highlights"> Video highlights</label>
+          </div></div>
 
-  <footer class="site-footer"><p>Next Gen Team Site · Customer inquiry form · Team websites for select sports programs.</p></footer>
+          <div class="field full"><label for="links">Current team links</label><textarea id="links" name="current_links" placeholder="Paste GameChanger, NCS, Facebook, Instagram, team website, sponsor links, or other relevant URLs."></textarea></div>
+          <div class="field full"><label for="message">What are you trying to build? *</label><textarea id="message" name="message" required placeholder="Tell us what the team needs, what problem you want solved, and anything important about the season/tournament timeline."></textarea></div>
+          <div class="field full"><label class="consent"><input type="checkbox" name="consent" required value="Confirmed"> I understand this is an inquiry form and I will not submit private child/player information beyond high-level team needs.</label></div>
+        </div>
 
-  <script>
-    const form = document.getElementById('engageForm');
-    const statusBox = document.getElementById('formStatus');
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Submit Inquiry</button><a class="btn btn-ghost" href="mailto:hello@next-gen-team.site?subject=NextGen%20Team%20Sites%20Inquiry">Email instead</a><a class="btn btn-ghost" href="index.html#pricing">Review packages</a></div>
+        <p class="form-note">After submission you'll be redirected to a confirmation page. If the network request fails, the message below will show the issue.</p>
+        <div id="formStatus" class="status-box" role="status"></div>
+      </form>
+    </div>
+  </section>
+</main>
 
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      statusBox.style.display = 'block';
-      statusBox.className = 'status-box';
-      statusBox.textContent = 'Submitting inquiry through Formspree...';
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot-base">
+    <span>© 2026 NEXTGEN TEAM SITES · GEORGETOWN, TX</span>
+    <span>PART OF THE RALLY PLATFORM · NGTS → RALLY-OS → RALLY-IQ</span>
+  </div>
+</footer>
 
-      const formData = new FormData(form);
+<script>
+/* ---------- Theme toggle (shared with index) ---------- */
+const themeBtn=document.getElementById('themeBtn'),root=document.documentElement;
+const moon=themeBtn.querySelector('.ico-moon'),sun=themeBtn.querySelector('.ico-sun');
+function setTheme(t){
+  root.setAttribute('data-theme',t);
+  localStorage.setItem('ngts-theme',t);
+  moon.style.display=t==='dark'?'block':'none';
+  sun.style.display=t==='light'?'block':'none';
+}
+setTheme(localStorage.getItem('ngts-theme')||'dark');
+themeBtn.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
 
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
+/* ---------- Package preselect from ?package= ---------- */
+const packageSelect=document.getElementById('package');
+const packageParam=(new URLSearchParams(window.location.search).get('package')||'').toLowerCase();
+const packageMap={
+  basic:'Basic — $249 one-time (Founding Team pricing)',
+  pro:'Pro — $499 + $39/mo (Founding Team pricing)',
+  elite:'Elite — $749 + $49/mo (Founding Team pricing)',
+  founding:'Founding Team spot — any tier',
+  organization:'Organization / multi-team — custom scope'
+};
+if(packageMap[packageParam]) packageSelect.value=packageMap[packageParam];
 
-        if (response.ok) {
-          window.location.href = 'thank-you.html';
-          return;
-        }
+/* ---------- Formspree submit ---------- */
+const form=document.getElementById('engageForm');
+const statusBox=document.getElementById('formStatus');
 
-        const data = await response.json().catch(() => null);
-        const message = data && data.errors ? data.errors.map(error => error.message).join(' ') : 'Formspree returned an error.';
-        throw new Error(message);
-      } catch (error) {
-        statusBox.className = 'status-box error';
-        statusBox.textContent = 'Submission did not complete: ' + error.message + ' You can use the Email instead button as a fallback.';
-      }
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  statusBox.style.display='block';
+  statusBox.className='status-box';
+  statusBox.textContent='Submitting inquiry...';
+
+  const formData=new FormData(form);
+
+  try{
+    const response=await fetch(form.action,{
+      method:form.method,
+      body:formData,
+      headers:{'Accept':'application/json'}
     });
-  </script>
 
-  <script>
-    const root = document.documentElement;
-    const toggle = document.querySelector('.theme-toggle');
-    const icon = document.querySelector('.toggle-icon');
-    const label = document.querySelector('.toggle-label');
-    const storageKey = 'nextgen-theme-v2';
-    const savedTheme = localStorage.getItem(storageKey);
-    const setTheme = (theme) => {
-      root.setAttribute('data-theme', theme);
-      localStorage.setItem(storageKey, theme);
-      const isLight = theme === 'light';
-      toggle.setAttribute('aria-pressed', String(isLight));
-      icon.textContent = isLight ? '🌙' : '☀️';
-      label.textContent = isLight ? 'Dark' : 'Light';
-    };
-    setTheme(savedTheme || 'light');
-    toggle.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
-  </script>
+    if(response.ok){
+      window.location.href='thank-you.html';
+      return;
+    }
+
+    const data=await response.json().catch(()=>null);
+    const message=data&&data.errors?data.errors.map(error=>error.message).join(' '):'The form service returned an error.';
+    throw new Error(message);
+  }catch(error){
+    statusBox.className='status-box error';
+    statusBox.textContent='Submission did not complete: '+error.message+' You can use the Email instead button as a fallback.';
+  }
+});
+</script>
 </body>
 </html>
